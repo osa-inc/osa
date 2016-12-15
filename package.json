@@ -12,7 +12,6 @@
    "prod": "gulp --production",
    "dev": "gulp watch",
     "build": "cross-env NODE_ENV=production node client/build/build.js",
-    "clean": "rm -rf dist",
     "cli-dev": "cross-env NODE_ENV=development node client/build/dev-server.js",
     "lint:fix": "eslint --fix --ext .js .vue client/src/* client/build/* client/config/*"
   },
