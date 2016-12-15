@@ -1,0 +1,21 @@
+ip: 192.168.10.10
+memory: 2048
+cpus: 1
+hostname: dev-osa
+name: osa
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ./
+        to: /home/vagrant/osa
+sites:
+    -
+        map: osa.app
+        to: /home/vagrant/osa/public
+        hhvm: false
+elasticsearch: true
+fluentd: false
+mongodb: false
+couchbase: false

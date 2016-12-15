@@ -60,7 +60,6 @@
     "post-update-cmd": [
       "Illuminate\\Foundation\\ComposerScripts::postUpdate",
       "php artisan optimize"
-      "@cs"
     ],
     "md": "php ./vendor/bin/phpmd app text ./phpmd.xml",
     "quality-assurance": [
