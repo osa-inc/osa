@@ -1,0 +1,2 @@
+webpackJsonp([1,2],{4:function(e,t,n){"use strict";function o(e){return e&&e.__esModule?e:{default:e}}var d=n(0),u=o(d),a="Hello world";u.default.render(u.default.createVNode(16,MyComponent,{message:a}),document.getElementById("app"))}},[4]);
+//# sourceMappingURL=app.6d6780cdba5bcbc768f7.js.map
