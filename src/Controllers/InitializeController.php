@@ -11,21 +11,16 @@
  */
 declare(strict_types=1);
 
-namespace Osaapp\Http\Middleware;
+namespace Osa\Component\Controllers;
 
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
+use Illuminate\Routing\Controller;
 
 /**
- * Class VerifyCsrfToken
+ * Class InitializeController
  */
-class VerifyCsrfToken extends BaseVerifier
+class InitializeController extends Controller
 {
-    /**
-     * The URIs that should be excluded from CSRF verification.
-     *
-     * @var array
-     */
-    protected $except = [
-        //
-    ];
+    public function invoke()
+    {
+    }
 }

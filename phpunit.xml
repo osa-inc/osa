@@ -7,6 +7,8 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
+         printerFile="vendor/whatthejeff/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
+         printerClass="NyanCat\PHPUnit\ResultPrinter"
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Application Test Suite">
@@ -15,7 +17,11 @@
     </testsuites>
     <filter>
         <whitelist processUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">./app</directory>
+            <directory suffix=".php">src/</directory>
+            <exclude>
+                <directory suffix="Interface.php">src/</directory>
+                <directory suffix="ServiceProvider.php">src</directory>
+            </exclude>
         </whitelist>
     </filter>
     <php>
@@ -23,5 +29,6 @@
         <env name="CACHE_DRIVER" value="array"/>
         <env name="SESSION_DRIVER" value="array"/>
         <env name="QUEUE_DRIVER" value="sync"/>
+        <env name="DB_CONNECTION" value="testing"/>
     </php>
 </phpunit>
