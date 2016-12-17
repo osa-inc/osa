@@ -35,6 +35,6 @@ final class GroupsTable extends Migration
                 $table->increments('group_id');
                 $table->string('group_name');
                 $table->unique('group_name', 'u_idx_groups_00');
-        });
+            });
     }
 }
