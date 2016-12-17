@@ -32,9 +32,9 @@ final class GroupsTable extends Migration
     {
         $this->schemaBuilder($this->getConnection())
             ->create($this->table, function (Blueprint $table) {
-            $table->increments('group_id');
-            $table->string('group_name');
-            $table->unique('group_name', 'u_idx_groups_00');
+                $table->increments('group_id');
+                $table->string('group_name');
+                $table->unique('group_name', 'u_idx_groups_00');
         });
     }
 }

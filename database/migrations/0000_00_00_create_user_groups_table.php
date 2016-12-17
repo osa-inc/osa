@@ -32,9 +32,9 @@ final class UserGroupsTable extends Migration
     {
         $this->schemaBuilder($this->getConnection())
             ->create($this->table, function (Blueprint $table) {
-            $table->unsignedInteger('user_id');
-            $table->unsignedInteger('group_id');
-            $table->unique(['user_id', 'group_id'], 'u_idx_user_groups_00');
-        });
+                $table->unsignedInteger('user_id');
+                $table->unsignedInteger('group_id');
+                $table->unique(['user_id', 'group_id'], 'u_idx_user_groups_00');
+            });
     }
 }

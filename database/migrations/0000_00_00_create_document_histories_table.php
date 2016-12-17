@@ -22,7 +22,7 @@ final class DocumentHistoriesTable extends Migration
 {
     use MigrationTrait;
 
-    /** @var string  */
+    /** @var string */
     protected $table = 'document_histories';
 
     /**
@@ -32,14 +32,14 @@ final class DocumentHistoriesTable extends Migration
     {
         $this->schemaBuilder($this->getConnection())
             ->create($this->table, function (Blueprint $table) {
-            $table->increments('document_history_id');
-            $table->unsignedInteger('document_id');
-            $table->string('open_document_id', 20);
-            $table->unsignedInteger('user_id');
-            $table->string('title', 255);
-            $table->mediumText('body');
-            $table->tinyInteger('published')->default(0);
-            $table->timestamps();
-        });
+                $table->increments('document_history_id');
+                $table->unsignedInteger('document_id');
+                $table->string('open_document_id', 20);
+                $table->unsignedInteger('user_id');
+                $table->string('title', 255);
+                $table->mediumText('body');
+                $table->tinyInteger('published')->default(0);
+                $table->timestamps();
+            });
     }
 }

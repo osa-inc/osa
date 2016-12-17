@@ -32,8 +32,8 @@ final class UserRolesTable extends Migration
     {
         $this->schemaBuilder($this->getConnection())
             ->create($this->table, function (Blueprint $table) {
-            $table->integer('user_id');
-            $table->tinyInteger('is_admin')->default(0);
-        });
+                $table->integer('user_id');
+                $table->tinyInteger('is_admin')->default(0);
+            });
     }
 }

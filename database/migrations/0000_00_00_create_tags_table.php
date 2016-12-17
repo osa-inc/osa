@@ -34,10 +34,10 @@ final class TagsTable extends Migration
     {
         $this->schemaBuilder($this->getConnection())
             ->create($this->table, function (Blueprint $table) {
-            $table->increments('tag_id');
-            $table->string('name', 255)->unique();
-            $table->string('display_title')->nullable();
-            $table->timestamps();
-        });
+                $table->increments('tag_id');
+                $table->string('name', 255)->unique();
+                $table->string('display_title')->nullable();
+                $table->timestamps();
+            });
     }
 }
