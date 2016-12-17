@@ -7,8 +7,6 @@
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
          processIsolation="false"
-         printerFile="vendor/whatthejeff/nyancat-phpunit-resultprinter/src/NyanCat/PHPUnit/ResultPrinter.php"
-         printerClass="NyanCat\PHPUnit\ResultPrinter"
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Application Test Suite">
