@@ -2,6 +2,7 @@
 
 *require php >=7.0.0*
 
+[![Build Status](https://travis-ci.org/osa-inc/osa.svg?branch=feature%2Fdevelop)](https://travis-ci.org/osa-inc/osa)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/osa-inc/osa/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/osa-inc/osa/?branch=develop)
 [![Coverage Status](https://coveralls.io/repos/github/osa-inc/osa/badge.svg?branch=develop)](https://coveralls.io/github/osa-inc/osa?branch=develop)
 
