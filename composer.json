@@ -36,7 +36,8 @@
     "phpmetrics/phpmetrics": "^1.10.0",
     "sebastian/phpcpd": "*",
     "phploc/phploc": "*",
-    "pdepend/pdepend": "^2.2.4"
+    "pdepend/pdepend": "^2.2.4",
+    "satooshi/php-coveralls": "dev-master"
   },
   "autoload": {
     "classmap": [
