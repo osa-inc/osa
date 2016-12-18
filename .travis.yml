@@ -18,4 +18,4 @@ script:
     - ./vendor/bin/phploc src/
     - chmod 777 tests/build/clover.xml
 after_success:
-    - if [[ ${TRAVIS_PHP_VERSION:0:3} == "7" ]]; then travis_retry php vendor/bin/coveralls; fi
+    - travis_retry php ./vendor/bin/coveralls -v

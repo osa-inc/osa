@@ -11,7 +11,7 @@
  */
 declare(strict_types=1);
 
-namespace Osaapp\Http\Middleware;
+namespace Osa\App\Http\Middleware;
 
 use Illuminate\Cookie\Middleware\EncryptCookies as BaseEncrypter;
 

@@ -11,7 +11,7 @@
  */
 declare(strict_types=1);
 
-namespace Osaapp\Exceptions;
+namespace Osa\App\Exceptions;
 
 use Exception;
 use Illuminate\Auth\AuthenticationException;

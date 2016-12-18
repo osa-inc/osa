@@ -44,7 +44,7 @@
       "database"
     ],
     "psr-4": {
-      "OsaApp\\": "app/",
+      "Osa\\App\\": "app/",
       "Osa\\Component\\": "src/"
     }
   },

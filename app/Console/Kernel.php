@@ -11,7 +11,7 @@
  */
 declare(strict_types=1);
 
-namespace Osaapp\Console;
+namespace Osa\App\Console;
 
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 
