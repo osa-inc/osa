@@ -1,7 +1,7 @@
 <?php
 
 $finder = \Symfony\CS\Finder\DefaultFinder::create()
-    ->in(['app']);
+    ->in(['app', 'src']);
 
 return Symfony\CS\Config\Config::create()
     ->setUsingLinter(false)

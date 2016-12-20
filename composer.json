@@ -1,7 +1,12 @@
 {
   "name": "osa-inc/osa",
-  "description": "The Laravel Framework.",
+  "description": "documents.",
   "keywords": [
+  ],
+  "authors": [
+    {
+      "name": "osa contributors"
+    }
   ],
   "license": "MIT",
   "type": "project",
@@ -31,14 +36,16 @@
     "phpmetrics/phpmetrics": "^1.10.0",
     "sebastian/phpcpd": "*",
     "phploc/phploc": "*",
-    "pdepend/pdepend": "^2.2.4"
+    "pdepend/pdepend": "^2.2.4",
+    "satooshi/php-coveralls": "dev-master"
   },
   "autoload": {
     "classmap": [
       "database"
     ],
     "psr-4": {
-      "Osa\\": "app/"
+      "Osa\\App\\": "app/",
+      "Osa\\Component\\": "src/"
     }
   },
   "autoload-dev": {
@@ -60,18 +67,18 @@
     "post-update-cmd": [
       "Illuminate\\Foundation\\ComposerScripts::postUpdate",
       "php artisan optimize"
-      "@cs"
     ],
-    "md": "php ./vendor/bin/phpmd app text ./phpmd.xml",
+    "md": "./vendor/bin/phpmd src text ./phpmd.xml",
+    "pdepend": "./vendor/bin/pdepend  --summary-xml=tests/quality-assurance/summary.xml --jdepend-chart=tests/quality-assurance/jdepend.svg --overview-pyramid=tests/quality-assurance/pyramid.svg src/",
     "quality-assurance": [
       "php artisan config:clear",
-      "php ./vendor/bin/phpunit",
-      "php ./vendor/bin/phpcpd app/",
-      "php ./vendor/bin/pdepend  --summary-xml=tests/build/summary.xml --jdepend-chart=tests/quality-assurance/jdepend.svg --overview-pyramid=tests/quality-assurance/pyramid.svg app/",
-      "php ./vendor/bin/phploc app --log-xml=tests/quality-assurance/phploc.xml"
+      "./vendor/bin/phpunit",
+      "./vendor/bin/phpcpd src/",
+      "./vendor/bin/phploc src/ --log-xml=tests/quality-assurance/phploc.xml"
     ],
-    "cs": "php ./vendor/bin/php-cs-fixer fix",
-    "phpcs": "./vendor/bin/phpcs app/ --report-full --report-source --standard=PSR2 --colors"
+    "test": "./vendor/bin/phpunit --report-useless-tests --coverage-clover=tests/build/clover.xml --coverage-text",
+    "cs": "./vendor/bin/php-cs-fixer fix",
+    "phpcs": "./vendor/bin/phpcs src/ --report-full --report-source --standard=PSR2 --colors"
   },
   "config": {
     "preferred-install": "dist"

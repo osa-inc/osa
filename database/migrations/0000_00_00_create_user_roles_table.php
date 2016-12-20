@@ -12,20 +12,28 @@
 
 declare(strict_types=1);
 
-use Illuminate\Database\Seeder;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 /**
- * Class DatabaseSeeder
+ * Class UserRolesTable
  */
-final class DatabaseSeeder extends Seeder
+final class UserRolesTable extends Migration
 {
+    use MigrationTrait;
+
+    /** @var string  */
+    protected $table = 'user_roles';
+
     /**
-     * Run the database seeds.
-     *
-     * @return void
+     * Run the migrations.
      */
-    public function run()
+    public function up()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->schemaBuilder($this->getConnection())
+            ->create($this->table, function (Blueprint $table) {
+                $table->integer('user_id');
+                $table->tinyInteger('is_admin')->default(0);
+            });
     }
 }
